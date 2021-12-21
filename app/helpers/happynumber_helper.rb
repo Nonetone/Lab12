@@ -1,0 +1,2 @@
+module HappynumberHelper
+end

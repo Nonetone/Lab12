@@ -1,0 +1,2 @@
+class Happynumber < ApplicationRecord
+end

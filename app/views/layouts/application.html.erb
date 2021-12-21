@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab12</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device—width; initial—scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data—turbolinks— track': 'reload' %>
+  </head>
+  <body>
+    <nav class="navbar fixed—top">
+      <% if current_user %>
+          Вы вошли как <%= current_user.name %>
+        <%= link_to "Выйти", '/logout' %> 
+        <% else %>    
+          <%= link_to 'Войти', '/login' %>
+          <%= link_to 'Регистрация', '/signup' %> 
+        <% end %>
+    </nav>  
+    <div class = "container">
+        <%= yield %>
+    </div>
+  </body>
+</html>
